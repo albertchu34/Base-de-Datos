@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio UPLA - Albert Jeankarlo Chuquiyauri Lagunas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.google apis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+VegovlNEkfuJieV8R9b9CX0gw7kP3k+X+Y5P2dg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" id="inicio">
+        <div class="container nav-container">
+            <a href="#inicio" class="logo">Portafolio <span>UPLA</span></a>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" data-animate>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="hero-subtitle">Base de Datos II</p>
+                    <h1>ALBERT JEANKARLO CHUQUIYAURI LAGUNAS</h1>
+                    <p class="hero-code">Código: <strong>P00904J</strong></p>
+                    <p class="hero-docente">Docente: <strong>Ing. RAUL ENRIQUE FERNANDEZ BEJARANO</strong></p>
+                    <p class="hero-description">Estudiante de Ingeniería de Sistemas y Computación en la UPLA.</p>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="profile.jpg" alt="Foto de Albert Jeankarlo Chuquiyauri Lagunas">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="sobre-mi" data-animate>
+            <div class="container about-container">
+                <div class="about-info">
+                    <h2>Sobre mí</h2>
+                    <p>Soy estudiante de Ingeniería de Sistemas y Computación, con interés en proyectos tecnológicos, sistemas de información y gestión empresarial. Busco combinar la estrategia y la innovación digital para aportar soluciones eficientes.</p>
+                </div>
+                <div class="about-details">
+                    <div class="detail-card">
+                        <p><span>Correo:</span> p00904j@ms.upla.edu.pe</p>
+                        <p><span>Código universitario:</span> P00904J</p>
+                        <p><span>Intereses:</span> Modelado de datos, administración de bases y analítica</p>
+                        <p><span>Objetivo:</span> Construir soluciones de datos que potencien la toma de decisiones</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portafolio">
+            <div class="container">
+                <h2>Portafolio Académico</h2>
+                <p class="portfolio-intro">Trabajos semanales desarrollados para la asignatura de Base de Datos II, enfocados en la planificación, diseño y optimización de sistemas de datos.</p>
+                <div class="portfolio-grid">
+                    <article class="portfolio-card" data-animate-card>
+                        <h3>Semana 1</h3>
+                        <p>Revisión de requerimientos y diseño conceptual mediante diagramas entidad-relación.</p>
+                        <a href="semana1.pdf" class="btn secondary-btn" download>Descargar PDF</a>
+                    </article>
+                    <article class="portfolio-card" data-animate-card>
+                        <h3>Semana 2</h3>
+                        <p>Normalización de tablas y definición de claves para asegurar integridad referencial.</p>
+                        <a href="semana2.pdf" class="btn secondary-btn" download>Descargar PDF</a>
+                    </article>
+                    <article class="portfolio-card" data-animate-card>
+                        <h3>Semana 3</h3>
+                        <p>Implementación de modelos lógicos en SQL y creación de restricciones.</p>
+                        <a href="semana3.pdf" class="btn secondary-btn" download>Descargar PDF</a>
+                    </article>
+                    <article class="portfolio-card" data-animate-card>
+                        <h3>Semana 4</h3>
+                        <p>Diseño de índices y vistas para optimizar consultas en escenarios reales.</p>
+                        <a href="semana4.pdf" class="btn secondary-btn" download>Descargar PDF</a>
+                    </article>
+                    <article class="portfolio-card" data-animate-card>
+                        <h3>Semana 5</h3>
+                        <p>Automatización con procedimientos almacenados y triggers orientados a negocio.</p>
+                        <a href="semana5.pdf" class="btn secondary-btn" download>Descargar PDF</a>
+                    </article>
+                    <article class="portfolio-card" data-animate-card>
+                        <h3>Semana 6</h3>
+                        <p>Monitoreo de rendimiento y preparación de plan de respaldo y recuperación.</p>
+                        <a href="semana6.pdf" class="btn secondary-btn" download>Descargar PDF</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Portafolio Universitario - UPLA</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
