@@ -18,22 +18,25 @@ export async function getDashboardStats(): Promise<DashboardStats> {
   noStore()
   const supabase = await createServerSupabaseClient()
 
-  const [{ count: semanasCount }, { count: archivosCount }, latestSemana] =
-    await Promise.all([
-      supabase.from("semanas").select("id", { count: "exact", head: true }),
-      supabase.from("archivos").select("id", { count: "exact", head: true }),
-      supabase
-        .from("archivos")
-        .select("fecha_subida")
-        .order("fecha_subida", { ascending: false })
-        .limit(1)
-        .maybeSingle(),
-    ])
+  const [
+    { count: semanasCount },
+    { count: archivosCount },
+    { data: latestSemana },
+  ] = await Promise.all([
+    supabase.from("semanas").select("id", { count: "exact", head: true }),
+    supabase.from("archivos").select("id", { count: "exact", head: true }),
+    supabase
+      .from("archivos")
+      .select("fecha_subida")
+      .order("fecha_subida", { ascending: false })
+      .limit(1)
+      .maybeSingle(),
+  ])
 
   return {
     semanas: semanasCount ?? 0,
     archivos: archivosCount ?? 0,
-    ultimaActualizacion: formatDateIso(latestSemana?.fecha_subida),
+    ultimaActualizacion: formatDateIso(latestSemana?.fecha_subida ?? null),
   }
 }
 
@@ -76,7 +79,6 @@ export async function getSemanaById(
     archivos: Tables<"archivos">[]
   }
 }
-
 
 export async function getSemanasWithArchivos(): Promise<
   Array<Tables<"semanas"> & { archivos: Tables<"archivos">[] }>
