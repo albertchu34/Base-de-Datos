@@ -87,20 +87,41 @@ export default async function HomePage() {
               </div>
             </div>
             <div className="rounded-3xl border border-white/10 bg-[#181a32]/60 p-6">
-              <div className="flex items-center gap-3 text-primary/80">
-                <GraduationCap className="size-8" />
-                <span className="font-semibold uppercase tracking-[0.3em]">
-                  Enfoque académico
-                </span>
+              <div className="space-y-6">
+                <div className="relative overflow-hidden rounded-2xl border border-primary/20 bg-[#14173a]/80 p-2 shadow-[0_20px_45px_rgba(10,12,30,0.45)]">
+                  <div className="relative h-60 w-full overflow-hidden rounded-xl bg-gradient-to-br from-[#1f2245]/70 to-[#0f1129]/70">
+                    <Image
+                      src="/foto.png"
+                      alt="Fotografía de Albert Jeankarlo Chuquiyauri Lagunas"
+                      fill
+                      sizes="(min-width: 768px) 320px, 100vw"
+                      className="object-cover object-center"
+                      priority
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0b0d21]/80 via-transparent to-transparent" />
+                  </div>
+                  <p className="mt-3 text-center text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                    Fotografía personal
+                  </p>
+                </div>
+
+                <div>
+                  <div className="flex items-center gap-3 text-primary/80">
+                    <GraduationCap className="size-8" />
+                    <span className="font-semibold uppercase tracking-[0.3em]">
+                      Enfoque académico
+                    </span>
+                  </div>
+                  <p className="mt-4 text-sm text-muted-foreground">
+                    Intereses en modelado de datos, normalización, diseño lógico y gestión de
+                    información para potenciar la toma de decisiones.
+                  </p>
+                  <p className="mt-4 text-sm text-muted-foreground">
+                    El portafolio es público para facilitar la consulta de materiales y
+                    referencias por parte de docentes y compañeros.
+                  </p>
+                </div>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground">
-                Intereses en modelado de datos, normalización, diseño lógico y gestión de
-                información para potenciar la toma de decisiones.
-              </p>
-              <p className="mt-4 text-sm text-muted-foreground">
-                El portafolio es público para facilitar la consulta de materiales y
-                referencias por parte de docentes y compañeros.
-              </p>
             </div>
           </section>
 
